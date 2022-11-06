@@ -1,0 +1,235 @@
+@keyframes anim-total_button {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 100%;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
+}
+
+a {
+  text-decoration: none;
+}
+
+.top_cart {
+  height: 400px;
+  background-image: url(img/cart.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cart {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+  &_content {
+    grid-column: span 8;
+  }
+  &_name {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+  }
+  &_item {
+    border-top: 0.5px solid #CACDD8;
+    padding-top: 25px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    &_input {
+      width: 71px;
+      height: 51px;
+      background: #F7F6F6;
+      border: none;
+      outline: none;
+      border-radius: 6px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 210%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #000000;
+    }
+  }
+  &_left {
+    display: flex;
+    gap: 32px;
+  }
+  &_img {
+    width: 173px;
+    height: 173px;
+  } 
+  &_info {
+    max-width: 276px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  &_product_who {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+  }
+  &_product_which {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+  }
+  &_product_price {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #050505;
+  }
+  &_link {
+    display: flex;
+    gap: 30px;
+    &_item {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 210%;
+      text-decoration-line: underline;
+      color: #000000;
+      transition: all .3s;
+      &:hover {
+        text-decoration-line: none;
+        color: #888888;
+      }
+    }
+  }
+  &_buttons {
+    padding-top: 18px;
+    display: flex;
+    gap: 14px;
+    &_button {
+      width: 200px;
+      height: 37px;
+      background: transparent;
+      border: 1px solid #000000;
+      border-radius: 50px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 10px 34px 10px 34px;
+      color: #020202;
+      transition: all .3s;
+      &:hover {
+      background: #000000;
+      color: #FFFFFF;
+      }
+    }
+  }
+  &_form {
+    height: 556px;
+    background: #F7F6F6;
+    border-radius: 20px;
+    grid-column: span 4;
+    &_h3 {
+      padding-top: 42px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: #000000;
+      text-align: center;
+    }
+  }
+}
+.form {
+  display: flex;
+    flex-direction: column;
+    gap: 64px;
+  &_string {
+    padding-top: 35px;
+    padding-left: 27px;
+    padding-right: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+    &_item {
+      padding-bottom: 3px;
+      border: none;
+      border-bottom: 1px solid #CACDD8;
+      background: transparent;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+      outline: none;
+      font-family: 'Montserrat';
+      &::placeholder {
+        font-family: 'Montserrat';
+        color: #000000;
+      }
+    }
+  }
+  &_total {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    &_result {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+    }
+    &_button {
+      width: 290px;
+      height: 41px;
+      border: 1px solid #040404;
+      border-radius: 20px;
+      background: transparent;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: #000000;
+      transition: all 0.3s;
+      &:hover {
+        background: #000000;
+        color: #FFFFFF;
+        animation: anim-total_button 2s ease-out 0s 1 reverse forwards;
+      }
+    }
+  }
+}
+
